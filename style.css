@@ -1,0 +1,57 @@
+/* Basic Reset & Typography */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+header h1 { font-size: 2.5rem; letter-spacing: -1px; }
+header p { color: #666; font-size: 1.1rem; margin-top: 0.5rem; }
+
+/* Gallery Grid */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Artwork Cards */
+.artwork {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+.artwork:hover { transform: translateY(-5px); }
+.artwork img { 
+    width: 100%; 
+    height: 250px; 
+    object-fit: cover; /* Keeps images uniform */
+    display: block;
+}
+.artwork h3, .artwork p { padding: 0 1.5rem; }
+.artwork h3 { margin-top: 1rem; font-size: 1.2rem; }
+.artwork p { padding-bottom: 1.5rem; color: #777; font-size: 0.9rem; }
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    color: #666;
+}
+footer a { color: #333; text-decoration: underline; }
