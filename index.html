@@ -4,7 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mahir Foysal | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* --- ALL STYLES ARE HERE --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            background-color: #F2EFE9; /* Deep cream background */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #2B2825; /* Warm charcoal text (softer than pure black) */
+        }
+
+        /* Top Right Header */
+        .top-header {
+            display: flex;
+            justify-content: flex-end;
+            padding: 50px 60px;
+            background-color: #E6E0D4; /* Contrasting warm sand/taupe color */
+            border-bottom: 1px solid rgba(0,0,0,0.05); /* Very subtle line to separate it */
+        }
+
+        .profile-info { text-align: right; }
+
+        .profile-info h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 4px;
+            color: #1A1816; /* Slightly darker for the main name */
+        }
+
+        .profile-info .role {
+            font-size: 0.95rem;
+            color: #5A554E;
+            margin-bottom: 6px;
+        }
+
+        .profile-info .contact {
+            font-size: 0.9rem;
+            color: #7A746C;
+        }
+
+        .profile-info .contact a {
+            color: #7A746C;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .profile-info .contact a:hover { color: #25D366; }
+
+        /* Middle Welcome Section */
+        .welcome-section {
+            text-align: center;
+            padding: 60px 20px 80px 20px;
+        }
+
+        .welcome-section h2 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            letter-spacing: -1.5px;
+            line-height: 1.1;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #1A1816;
+        }
+
+        /* Image Gallery Grid */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 24px; 
+            padding: 0 40px 80px 40px; 
+            max-width: 1400px;
+            margin: 0 auto; 
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 16px; /* Slightly more rounded for a softer look */
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06); /* Softer, more elegant shadow */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+            background-color: #DCD6CA; /* Placeholder color matching the header */
+            aspect-ratio: 1 / 1; 
+            object-fit: cover; 
+        }
+
+        .gallery img:hover {
+            transform: translateY(-6px); 
+            box-shadow: 0 16px 32px rgba(0,0,0,0.12); 
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .top-header { 
+                padding: 30px 20px; 
+                justify-content: center; 
+            }
+            .profile-info { text-align: center; }
+            .welcome-section { padding: 40px 20px 60px 20px; }
+            .welcome-section h2 { font-size: 2.2rem; }
+            .gallery { padding: 0 16px 60px 16px; gap: 16px; }
+        }
+    </style>
 </head>
 <body>
 
