@@ -1,57 +1,47 @@
-/* Basic Reset & Typography */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+/* Basic Page Setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-    line-height: 1.6;
+    background-color: #f4f4f4; /* A soft, neutral gallery background */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
-/* Header */
-header {
-    text-align: center;
-    padding: 4rem 2rem;
-    background-color: #fff;
-    border-bottom: 1px solid #eee;
-}
-header h1 { font-size: 2.5rem; letter-spacing: -1px; }
-header p { color: #666; font-size: 1.1rem; margin-top: 0.5rem; }
-
-/* Gallery Grid */
+/* The Grid Layout */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 3rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    /* This automatically adjusts columns based on screen size */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 24px; /* Space between the images */
+    padding: 40px;
+    max-width: 1400px;
+    margin: 0 auto; /* Centers the whole gallery on the screen */
 }
 
-/* Artwork Cards */
-.artwork {
-    background: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
-}
-.artwork:hover { transform: translateY(-5px); }
-.artwork img { 
-    width: 100%; 
-    height: 250px; 
-    object-fit: cover; /* Keeps images uniform */
+/* Image Styling */
+.gallery img {
+    width: 100%;
+    height: auto;
     display: block;
+    border-radius: 12px; /* Gives the images soft, modern rounded corners */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Subtle shadow to make them pop */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+    cursor: pointer;
 }
-.artwork h3, .artwork p { padding: 0 1.5rem; }
-.artwork h3 { margin-top: 1rem; font-size: 1.2rem; }
-.artwork p { padding-bottom: 1.5rem; color: #777; font-size: 0.9rem; }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 2rem;
-    background-color: #fff;
-    border-top: 1px solid #eee;
-    color: #666;
+/* Hover Effect */
+.gallery img:hover {
+    transform: translateY(-5px); /* Lifts the image up slightly */
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15); /* Deepens the shadow on hover */
 }
-footer a { color: #333; text-decoration: underline; }
+
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+    .gallery {
+        padding: 16px;
+        gap: 16px;
+    }
+}
