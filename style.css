@@ -6,42 +6,105 @@
 }
 
 body {
-    background-color: #f4f4f4; /* A soft, neutral gallery background */
+    background-color: #f9f9f9; /* A very soft, premium off-white */
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #111;
+}
+
+/* Top Right Header */
+.top-header {
+    display: flex;
+    justify-content: flex-end; /* Pushes everything to the right */
+    padding: 50px 60px;
+}
+
+.profile-info {
+    text-align: right; /* Aligns the text itself to the right */
+}
+
+.profile-info h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 4px;
+}
+
+.profile-info .role {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 6px;
+}
+
+.profile-info .contact {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.profile-info .contact a {
+    color: #777;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.profile-info .contact a:hover {
+    color: #25D366; /* Turns WhatsApp green when hovered */
+}
+
+/* Middle Welcome Section */
+.welcome-section {
+    text-align: center;
+    padding: 40px 20px 80px 20px; /* Lots of breathing room */
+}
+
+.welcome-section h2 {
+    font-size: 3.5rem; /* Big and bold */
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    line-height: 1.1;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 /* The Grid Layout */
 .gallery {
     display: grid;
-    /* This automatically adjusts columns based on screen size */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-    gap: 24px; /* Space between the images */
-    padding: 40px;
+    gap: 24px; 
+    padding: 0 40px 60px 40px; 
     max-width: 1400px;
-    margin: 0 auto; /* Centers the whole gallery on the screen */
+    margin: 0 auto; 
 }
 
-/* Image Styling */
 .gallery img {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 12px; /* Gives the images soft, modern rounded corners */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Subtle shadow to make them pop */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+    border-radius: 12px; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
     cursor: pointer;
+    background-color: #eee; /* Placeholder color while loading */
 }
 
-/* Hover Effect */
 .gallery img:hover {
-    transform: translateY(-5px); /* Lifts the image up slightly */
-    box-shadow: 0 12px 24px rgba(0,0,0,0.15); /* Deepens the shadow on hover */
+    transform: translateY(-5px); 
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15); 
 }
 
 /* Mobile Adjustments */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+    .top-header {
+        padding: 30px 20px;
+        justify-content: center; /* Centers your name on mobile phones */
+    }
+    .profile-info {
+        text-align: center;
+    }
+    .welcome-section h2 {
+        font-size: 2.2rem; /* Makes the title smaller on phones so it fits */
+    }
     .gallery {
-        padding: 16px;
+        padding: 0 16px 40px 16px;
         gap: 16px;
     }
 }
